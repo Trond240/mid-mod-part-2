@@ -7,3 +7,10 @@
     font-family: 'Pacifico', cursive;
     width: 30%;
 }
+
+button {
+    background: teal;
+    width: 23%;
+    height: 10%;
+    color: white;
+}

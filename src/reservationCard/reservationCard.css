@@ -1,0 +1,8 @@
+.reservation-card {
+    border: solid 4px black;
+    background-color: white;
+    margin: 10px;
+    border-radius: 4px;
+    color: teal;
+    font-family: 'Pacifico', cursive;
+}

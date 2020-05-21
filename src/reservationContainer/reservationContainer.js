@@ -1,5 +1,7 @@
 import React from 'react';
 import { Reservations } from '../reservationCard/reservationCard';
+import './reservationContainer.css';
+
 
 export const ReservationsContainer = (props) => {
 console.log(props.reservations)

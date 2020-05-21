@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Reservations.css';
+import './reservationCard.css';
 
 export const Reservations = (props) => {
     return (

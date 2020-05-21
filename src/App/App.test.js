@@ -28,12 +28,13 @@ const renderApp = () => {
     )
 }
 
-describe('App', async () => {
+describe('App', () => {
 
-  it('renders our reservation App', () => {
-    const { getByText, getByPlaceholderText } = renderApp()
+  it('renders our reservation App', ()  => {
+    const { getByText, getByPlaceholderText, debug} = renderApp()
+    debug;
 
-    const nameEl = getByPlaceholderText('Name')
+    const nameEl = getByPlaceholderText('Nae')
     expect(nameEl).toBeInTheDocument();
 
     const dateEl = getByPlaceholderText("Date (mm/dd)")

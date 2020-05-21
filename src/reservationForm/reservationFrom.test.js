@@ -8,6 +8,7 @@ import AddReservation from '../reservationForm/reservationFrom';
 
 describe('Add Reservation', () => {
     it('Should render the reservation form', () => {
+        let id = 1;
         const mockAddReservation = jest.fn()
         const { getByText, getByPlaceholderText } = render(
                 <AddReservation  addNewReservation={mockAddReservation}/>

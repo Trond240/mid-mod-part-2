@@ -4,7 +4,7 @@ import './reservationContainer.css';
 
 
 export const ReservationsContainer = (props) => {
-console.log(props.reservations)
+console.log(props)
 const allReservations = props.reservations.map(res => {
     console.log(res)
     return <Reservations
@@ -14,6 +14,7 @@ const allReservations = props.reservations.map(res => {
         number={res.number}
         id={res.id}
         key={res.id}
+        delete={props.delete}
         />
     })
 

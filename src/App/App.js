@@ -17,6 +17,33 @@ class App extends Component {
   addNewReservation = newReservation => {
     console.log('reservatons', this.state.reservations)
     this.setState({ reservations: [...this.state.reservations, newReservation]})
+    this.postReservation(newReservation)
+  }
+
+  postReservation(newReservation) {
+    fetch("http://localhost:3001/api/v1/reservations", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newReservation)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err.message))
+  }
+
+  deleteReservation(id) {
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err.message))
   }
 
   componentDidMount() {
@@ -37,7 +64,7 @@ class App extends Component {
           <AddReservation addNewReservation={this.addNewReservation}/>
         </div>
         <div className='resy-container'>
-        <ReservationsContainer reservations={this.state.reservations}/>
+        <ReservationsContainer reservations={this.state.reservations} delete={this.deleteReservation}/>
         </div>
       </div>
     )

@@ -4,11 +4,11 @@ class AddReservation extends Component {
 constructor() {
     super();
     this.state = {
-    date: '',
-    id: '',
-    name: '',
-    number: '',
-    time: ''
+        id: '',
+        date: '',
+        name: '',
+        time:'',
+        number: ''
     }
 }
 
@@ -47,7 +47,7 @@ render() {
         <input
         type='text'
         placeholder='number of guests'
-        name='number of guests'
+        name='number'
         onChange={this.handleChange}
         />
         <button onClick={this.submitNewReservation}>Book Reservation</button>
